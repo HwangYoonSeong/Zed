@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Zed</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    background-color: #353535;
+}
+#container {
+    max-width: 750px;
+    margin: 0px auto;
+}
+
+.containrer-full {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    margin: 0 auto;
+    background-color: rgb(39, 39, 39);
+    box-sizing:border-box;
+}
+
+header {
+    min-height: 80px;
+    padding: 10px 20px 0;
+
+}
+
+header a.logo {
+    float: left;
+    margin-top: 8px;
+}
+
+header a.logo img {
+    width: 80%;
+}
+
+header ul {
+    list-style: none;
+    float: right;
+}
+
+header ul li {
+    display:inline-block;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-family:Arial;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 0 5px;
+    margin: 0 10px;    
+    width: 100px;
+}
+
+header ul li a:hover {
+    padding-bottom: 8px;
+    border-bottom: 3px solid rgb(163, 0, 0);
+    color: rgb(163, 0, 0);   
+    
+}
+
+.main-img {
+    height: 400px;
+    overflow: hidden;
+    background: url(https://ww.namu.la/s/359b19ab6160989eba0c9c2581cc2130cb5529e94cf8ccc25d0dfaa43cebf36df5d71b043a1a7e1b52ff5e7a278b61e53b2bad38c7a761add0076a863383f06241feb9978428add0780a8bc76aaf5f564deb54f0c96562054fe0b781867ec94b66e53a52739eb57c99262bd94ef25570) top center no-repeat;
+    background-size: cover;
+}
+
+.text-box {
+    position: relative;
+    float: left;
+    left: 10px;
+    top: 70px;
+    padding: 10px 25px;
+    width: 45%;
+    
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.section-header{
+    background-color: rgb(129, 0, 0);
+    min-height: 30px;
+}
+
+section h2{
+     
+    display:inline-block;
+    font-family:Arial;
+    font-size: 20px;
+    width: 227px;
+}
+ 
+nav{
+    background-color: rgb(163, 0, 0);
+    min-height: 90px;
+}
+ 
+
+/*리스트 조건 없을 때*/
+ 
+nav a{
+    text-decoration: none;
+    display:inline-block;
+    font-family:Arial;
+    font-size: 20px;
+    padding: 10px;
+    margin-top:5px;
+    color:#f5c800;
+    width: 220px;
+    
+}
+ 
+nav  a:visited{
+    color:#f5c800;
+}
+nav  a:hover{
+    padding-bottom: 8px;
+    color: #ffffff;   
+     
+}  
+
+.text-center {
+    text-align: center;
+    color:#f5c800;
+}
+
+.row {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.col-3 {
+    width: 33.3333333333%;
+    float: left;
+}
+
+.gray-back {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    /*이거는 배경색상 적용 되지 않을 경우 */
+}
+
+.v250,
+.v350,
+.v360 {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.v350 {
+    height: 250px;
+}
+.v360 {
+    height: 400px;
+}
+
+.v250 h2,
+.v350 h2 {
+    font-size: 1.85rem;
+    font-weight: normal;
+}
+
+.v250 p {
+    font-size: 1rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+
+
+.img-part figure .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-part figure img {
+    width: 300px;
+    overflow: hidden;
+}
+
+.img-part figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.icon-box {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.icon-box i {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #c9c9c9;
+    margin: auto;
+}
+
+footer {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footlogo {
+    color:white;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #999;
+}
+
+footer ul li a:hover {
+    color: orange;
+}
+.skills img{
+    margin: 20px 0 20px 70px;
+    padding: 5px;
+    
+    }
+.skillView img{
+    margin-left:15px;
+    margin-top:-20px;
+}
+ 
+.skillName{
+    color:#f67004;
+    margin-left:10px;
+}
+.skillEx{
+    color:white;
+    margin-left:10px;
+}
+.skillCool{
+    color:#ffd339;
+    font-size: 10px;
+    margin-left:10px;
+}
+ 
+</style>
+</head>
+<body>
+    
+    <header style="background-color:rgb(17, 17, 17); box-sizing:border-box;">
+        <a   href="#" class="logo"><img style="width:50px;height:50px;  " src="lollogo.png"></a>
+        <ul>
+            <li><a href="https://kr.leagueoflegends.com/ko-kr/news/riot-games">
+                <b>RIOT</b></a></li>
+            <li><a href="https://namu.wiki/w/%EB%A6%AC%EA%B7%B8%20%EC%98%A4%EB%B8%8C%20%EB%A0%88%EC%A0%84%EB%93%9C"><b>GAME INFO</b></a></li>
+            <li><a href="https://kr.leagueoflegends.com/ko-kr/"><b>LOL</b></a></li>
+        </ul>
+        <p   style="font-size: 15px; font-family:Georgia, 'Times New Roman', Times, serif; color:#f5c800; margin-left:65px;">League Of Legends<br><span style="font-size: 25px;margin-left: 40px;">Zed</span></p>
+        
+    </header>
+
+    <div id="container">
+    <article class="container main-img">
+        <div class="text-box text-center">
+            
+            <h2>제드, 그림자의 주인<br>
+                Zed, the Master of Shadows</h2>
+            <p>"보이지 않는 검이 가장 무서운 법."</p>
+        </div>
+    </article>
+    
+    <section>
+        <div class="text-center section-header">
+            <h2>소개</h2>    
+        </div>
+        <div class="container row v350">
+            <h3 class="text-center">"균형 같은 소리 하지 마."</h3>
+            <p class="text-center"  style="font-family:Cambria; color:rgb(202, 202, 202)">제드는 극도로 무자비하고 인정사정 없는 인물로, 녹서스 침공군을 몰아내기 위해
+                <br>아이오니아의 전통 마법과 무술을 집약시킨다는 의도로 설립한 그림자단의 수장이다.
+                <br>아이오니아 전쟁 중 제드는 녹서스에게 이기고 싶다는 간절한 마음에서 그림자 비급의 봉인을 해제해 버렸다.
+                <br> 그 사악한 비급은 강력한 만큼이나 위험하고, 사용자를 타락의 길로 빠뜨리는 것이었다.
+                <br> 하지만 제드는 아랑곳하지 않고 모든 금단의 비술을 익혔다. 자신의 국가에,
+                <br> 아니면 자신이 만든 그림자단에 위협이 될 만한 것을 모조리 파괴하기 위해.</p>
+        </div>
+
+    </section>
+    
+    <section>
+        <div class="text-center section-header">
+            <h2>능력치</h2> 
+        </div>
+        <div class="container row v360">
+            <img src="Zed stat.png" style="width:600px; margin-left:70px;"> 
+        </div>
+    </section>
+
+    <section>
+        <div class="text-center section-header">
+            <h2>스킨</h2> 
+        </div>
+        <nav>
+            <div class="text-center">
+                <a href="ShockBlade_Zed.png"  target="iframe_a">ShockBlade</a> 
+                <a href="SKT1_Zed.png"  target="iframe_a">SKT T1</a> 
+                <a href="PROJECT_ZED.png"  target="iframe_a">PROJECT</a> 
+                <a href="Championship_Zed.png"  target="iframe_a">Championship</a>
+                <a href="DeathSworn_Zed.png"  target="iframe_a">Death Sworn</a> 
+                <a href="Galaxy_Zed.png"  target="iframe_a">Galaxy Slayer</a>  
+                
+            </div-->
+            <!--ul class="text-center">
+                <li><a href="ShockBlade_Zed.png"  target="iframe_a">ShockBlade</a></li> 
+                <li><a href="SKT1_Zed.png"  target="iframe_a">SKT T1</a></li>   
+                <li><a href="PROJECT_ZED.png"  target="iframe_a">PROJECT</a> </li> 
+                <li><a href="Championship_Zed.png"  target="iframe_a">Championship</a></li> 
+                <li><a href="DeathSworn_Zed.png"  target="iframe_a">Death Sworn</a> </li> 
+                <li><a href="Galaxy_Zed.png"  target="iframe_a">Galaxy Slayer</a>  </li> 
+            </ul-->
+                
+        </nav>
+        <article class="container">
+            <iframe style="border:none;" height="462px" width="750px" src="ShockBlade_Zed.png" name="iframe_a"></iframe>
+             
+            
+        </article>
+        
+    </section>
+    
+    <section>
+        <div class="text-center section-header">
+            <h2>스킬</h2> 
+        </div>
+        <article  class="container">
+                 
+                <div  class="skillView">
+                
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/ability/lol_Zed_P.png?v=20191212a">
+                                
+                            </td>
+                            <td>
+                                <p class="skillName">약자 멸시(Contempt for the Weak)</p>
+                                <p class="skillEx">제드는 체력이 50% 이하인 적을 기본 공격할 때 적의 최대 체력의 6/8/10%에 해당하는 추가 마법 피해를 입힙니다. 이 효과는 동일한 대상에 대해서는 10초에 한 번씩만 적용됩니다.
+                                   몬스터에게 입히는 피해량이 100% 증가합니다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/ability/lol_Zed_Q.png?v=20191212a">
+                                
+                            </td>
+                            <td>
+                                <p class="skillName">예리한 표창 (Razor Shuriken)</p>
+                                <p class="skillEx">제드와 그림자가 표창을 던져, 각각 처음 맞는 적에게 80/115/150/185/220(+1.0 추가AD)의 물리 피해를 입히고, 이후 관통하는 적들에게는 각각 60%의 피해를 입힙니다.
+                                    (사정거리: 900)</p>
+                                <p class="skillCool">기력 소모: 75/70/65/60/55
+                                    재사용 대기시간: 6초</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="margin-top:-65px" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/ability/lol_Zed_W.png?v=20191212a">
+                                
+                            </td>
+                            <td>
+                                <p class="skillName">살아있는 그림자 (Living Shadow)</p>
+                                <p class="skillEx">제드의 그림자가 전방으로 질주하여, 5초간 그 자리에 유지됩니다. 이 스킬을 다시 시전하면 제드가 그림자와 위치를 바꿉니다.
+                                    그림자는 제드가 사용하는 스킬을 모방합니다.
+                                    그림자와 제드가 동일한 대상을 가격할 경우, 제드는 30/35/40/45/50의 기력을 회복합니다. 기력 회복은 시전 시 1번만 적용됩니다. (사정거리: 700/1,950)</p>
+                                <p class="skillCool">기력 소모: 40/35/30/25/20
+                                    재사용 대기시간: 22/20/18/16/14초</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img style="margin-top:-65px" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/ability/lol_Zed_E.png?v=20191212a">
+                                
+                            </td>
+                            <td>
+                                <p class="skillName">그림자 베기 (Shadow Slash)</p>
+                                <p class="skillEx">제드와 그림자가 근처의 적들을 베어 70/95/120/145/170(+0.9 추가AD)의 물리 피해를 입힙니다.
+
+                                    제드가 이 스킬로 적 챔피언을 하나 맞힐 때마다 살아있는 그림자의 재사용 대기시간이 2초씩 감소합니다. 그림자가 복제한 그림자 베기에 맞은 적은 각각 1.5초 동안 20/25/30/35/40%의 둔화에 걸립니다.
+                                    
+                                    제드와 그림자의 그림자 베기에 모두 맞은 적은 둔화 비율이 30/37.5/45/52.5/60% 적용되는 대신, 추가 피해는 받지 않습니다.</p>
+                                <p class="skillCool">기력 소모: 50
+                                    재사용 대기시간: 5/4.5/4/3.5/3초</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img style="margin-top:-65px" src="http://static.inven.co.kr/image_2011/site_image/lol/dataninfo/icon/ability/lol_Zed_R.png?v=20191212a">
+                                
+                            </td>
+                            <td>
+                                <p class="skillName">죽음의 표식 (Death Mark)</p>
+                                <p class="skillEx">제드가 잠시 공격을 받지 않는 상태가 되어 제 자리에 6초 동안 유지되는 그림자를 생성합니다. 그 다음 대상에게 돌진하여 죽음의 표식을 남깁니다.
+                                    3초가 지나면 표식이 발동하여 (1.0AD)에 더해, 제드와 그림자가 표식이 적용된 동안 해당 적에게 가한 모든 마법과 물리 피해의 25/40/55%를 물리 피해로 가합니다. 죽음의 표식을 다시 활성화하면 제드가 이 그림자와 위치를 바꿉니다.
+                                    죽음의 표식 사용 후 그림자와 자리를 바꾸기 위해, 0.5초의 재사용 대기시간을 가집니다.</p>
+                                <p class="skillCool">재사용 대기시간: 120/90/60초</p>
+                            </td>
+                        </tr>
+                    </table>
+                         
+                    </div>
+                    <p style="margin:20px 0 0 100px" class="skillName"><스킬 가이드></p> 
+                    <iframe style="margin:20px 0 30px 100px" width="560" height="315" src="https://www.youtube.com/embed/jWaxEOMoGgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     
+                
+           
+            </div-->
+        </article>
+         
+
+    </section>
+        
+
+    <!--article class="container gray-back">
+        <div class="row v350">
+            <h2 class="text-center">프리프로세서(Preprocessor)란  </h2>
+            <p>프리프로세서는 번역하자면 “선행처리기” 라고 하는데, 주로 프로그래밍 언어에서 사용됩니다.
+                <br>원래 CSS나 HTML 파일에는 변수 또는 함수 같은 코드가 없어서, 사이트의 규모가 커지고, 복잡도가 증가하게 되면, 일일이 모든 코드를 입력하는 것이 힘들 수 있습니다.
+                <br>이때 SASS와 같은 CSS 프리프로세서를 사용하면, 변수, 함수 및 값의 연산 등을 사용할 수 있게 되어, CSS의 개발이 보다 체계화되고, 빠르게 개발을 할 수 있습니다. 다만 원시 코드를 그대로 브라우저에서 사용할 순 없고, 컴파일 과정을 통해 CSS로 변환해야만 하기 때문에, 번거로울 수 있지만, 이 번거로움을 상쇄하는 강력한 기능이 있기 때문에, 최근 많은 개발자들이 사용하고 있습니다. 필자 또한 웹 개발용으로 SASS를 강력 추천합니다. </p>
+        </div>
+        <div class="icon-box">
+            <i class="fa fa-hand-peace-o fa-4x" aria-hidden="true"></i>
+            <p>아이콘 입니다.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fa fa-heartbeat fa-4x" aria-hidden="true"></i>
+            <p>아이콘 입니다.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fa fa-flask fa-4x" aria-hidden="true"></i>
+            <p>아이콘 입니다.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fa fa fa-line-chart fa-4x" aria-hidden="true"></i>
+            <p>아이콘 입니다.</p>
+        </div>
+    </article-->
+
+</div>
+
+
+    <footer style="background-color:rgb(17, 17, 17); box-sizing:border-box;"  >
+        <div class="footlogo">@2020 YoonCastle</div>
+        <ul>
+            <li><a href="#">이 홈피 주인장은?</a></li>
+            <li><a href="#">개인정보 보호 </a></li>
+            <li><a href="#">사이트 약관 </a></li>
+        </ul>
+    </footer>
+ 
+</body>
+</html>
